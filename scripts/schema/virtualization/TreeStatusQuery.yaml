@@ -1,0 +1,6 @@
+      type: string
+      enum:
+      - "all"
+      - "running"
+      - "stopped"
+      default: "all"

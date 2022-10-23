@@ -1,0 +1,27 @@
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/RuleVMID'
+        key:
+          type: string
+          description: "{Host_ID}-{VM_ID}"
+          example: "host1-vm1"
+        text:
+          $ref: '#/components/schemas/RuleVMName'
+        Status:
+          $ref: '#/components/schemas/RuleVMStatus'
+        Type:
+          type: string
+          description: "Machine Type"
+          default: "machine"
+        iconCls:
+          type: string
+          description: "Web UI Icon info."
+          enum:
+          - "t-icon-vm-on"
+          - "t-icon-vm-off"
+          example: "t-icon-vm-on"
+        leaf:
+          type: boolean
+          description: "Web UI Tree"
+          example: true

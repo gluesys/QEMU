@@ -1,0 +1,23 @@
+      type: object
+      properties:
+        Total:
+          type: number
+          format: float
+          example: 65536
+        Used:
+          type: number
+          format: float
+          example: 55536
+        Free:
+          type: number
+          format: float
+          example: 15536
+        Unit:
+          type: string
+          enum:
+          - "B"
+          - "KiB"
+          - "MiB"
+          - "GiB"
+          default: "MiB"
+          example: "MiB"

@@ -1,0 +1,22 @@
+      type: object
+      properties:
+        ID:
+          $ref: '#/components/schemas/RuleVMID'
+        Name:
+          $ref: '#/components/schemas/RuleVMName'
+        HostID:
+          $ref: '#/components/schemas/RuleHostID'
+        HostName:
+          $ref: '#/components/schemas/RuleHostName'
+        General:
+          $ref: '#/components/schemas/VmInfoGeneral'
+        Hardware:
+          $ref: '#/components/schemas/VmInfoHardware'
+        BootOption:
+          $ref: '#/components/schemas/VmInfoBoot'
+        Histories:
+          type: array
+          items:
+            $ref: '#/components/schemas/VmInfoHistoryMsg'
+        Comment:
+          $ref: '#/components/schemas/VmInfoComment'

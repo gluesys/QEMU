@@ -1,0 +1,43 @@
+      type: object
+      properties:
+        NetworkIPaddr:
+          $ref: '#/components/schemas/HostInfoSoftwareNetworkIP'
+        Package:
+          type: object
+          properties:
+            CompiledAgainstLibrary:
+              type: object
+              properties:
+                Name:
+                  type: string
+                  example: "Compiled Against Library"
+                Version:
+                  type: string
+                  example: "libvirt 4.5.0"
+            RunningHypervisor:
+              type: object
+              properties:
+                Name:
+                  type: string
+                  example: "Running Hypervisor"
+                Version:
+                  type: string
+                  example: "QEMU 1.5.3"
+            UsingAPI:
+              type: object
+              properties:
+                Name:
+                  type: string
+                  example: "Using API"
+                Version:
+                  type: string
+                  example: "QEMU 4.5.0"
+            UsingLibrary:
+              type: object
+              properties:
+                Name:
+                  type: string
+                  example: "Using Library"
+                Version:
+                  type: string
+                  example: "libvirt 4.5.0"

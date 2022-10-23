@@ -1,0 +1,8 @@
+      type: object
+      properties:
+        BasicCPU:
+          type: string
+          example: "4"
+        MaxCPU:
+          type: string
+          example: "8"

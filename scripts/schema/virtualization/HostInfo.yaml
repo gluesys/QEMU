@@ -1,0 +1,16 @@
+      type: object
+      properties:
+        ID:
+          $ref: '#/components/schemas/RuleHostID'
+        HostName:
+          $ref: '#/components/schemas/RuleHostName'
+        General:
+          $ref: '#/components/schemas/HostInfoGeneral'
+        Hardware:
+          $ref: '#/components/schemas/HostInfoHardware'
+        Software:
+          $ref: '#/components/schemas/HostInfoSoftware'
+        VMStatus:
+          $ref: '#/components/schemas/HostInfoVmStatus'
+        VirtualNetworks:
+          $ref: '#/components/schemas/HostInfoVirtualNetwork'

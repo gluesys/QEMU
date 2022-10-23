@@ -1,0 +1,26 @@
+      type: object
+      properties:
+        ID:
+          $ref: '#/components/schemas/RuleNetworkID'
+        vNetwork:
+          type: string
+          example: "virbr0"
+        Type:
+          type: string
+          example: "NAT Network"
+        Driver:
+          type: string
+          enum:
+          - "e1000"
+          - "virtio"
+        HWaddr:
+          type: string
+          example: "00:0C:29:7A:28:12"
+        Interface:
+          type: string
+          example: "vnet0"
+        IPaddr:
+          type: string
+          format: ipv4
+        LinkUp:
+          type: boolean

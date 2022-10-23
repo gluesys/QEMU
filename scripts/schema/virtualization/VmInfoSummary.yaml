@@ -1,0 +1,32 @@
+      type: object
+      properties:
+        ID:
+          $ref: '#/components/schemas/RuleVMID'
+        Name:
+          $ref: '#/components/schemas/RuleVMName'
+        HostID:
+          $ref: '#/components/schemas/RuleHostID'
+        HostName:
+          $ref: '#/components/schemas/RuleHostName'
+        Status:
+          $ref: '#/components/schemas/RuleVMStatus'
+        Uptime:
+          type: string
+          description: ""
+          example: "240 day, 22 hour, 23 minute"
+        UseCPU:
+          type: string
+          description: ""
+          example: "80 %"
+        UseMemory:
+          type: string
+          description: ""
+          example: "65 %"
+        DiskIO:
+          type: string
+          description: ""
+          example: "R: 629.12 KiB, W: 2.43 MiB"
+        NetworkIO:
+          type: string
+          description: ""
+          example: "R: 51.96 MiB, T: 3.59 MiB"

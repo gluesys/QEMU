@@ -1,0 +1,30 @@
+      type: object
+      properties:
+        ID:
+          $ref: '#/components/schemas/RuleVMdiskID'
+        Name:
+          type: string
+          description: ""
+          example: "VM-100_OS_Disk"
+        VolID:
+          $ref: '#/components/schemas/RuleVolID'
+        VolName:
+          type: string
+          description: ""
+          example: "Storage"
+        Format:
+          type: string
+          description: ""
+          example: "qcow2" 
+        SizeG:
+          type: string
+          description: ""
+          example: "20" 
+        Summary:
+          type: string
+          description: ""
+          example: "VM-100_OS_Disk (20 GiB,qcow2)"
+        Used:
+          type: string
+          description: ""
+          example: "VM-100"

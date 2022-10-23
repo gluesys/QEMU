@@ -1,0 +1,33 @@
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/RuleHostID'
+        key:
+          type: string
+          description: "{Host_ID}"
+          example: "host1"
+        text:
+          $ref: '#/components/schemas/RuleHostName'
+        ManagementIp:
+          type: string
+          example: "192.168.61.25"
+          format: "ipv4"
+        entity:
+          type: array
+          description: "Virtual Machine List"
+          items:
+            $ref: '#/components/schemas/TreeVmList'
+        iconCls:
+          type: string
+          description: " Web UI Icon info."
+          enum:
+          - "t-icon-host"
+          example: "t-icon-host"
+        Type:
+          type: string
+          description: "Machine Type"
+          default: "host"
+        expanded:
+          type: boolean
+          description: "Web UI Tree"
+          example: true

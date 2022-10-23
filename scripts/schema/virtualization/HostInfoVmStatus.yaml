@@ -1,0 +1,11 @@
+      type: object
+      properties:
+        Total:
+          type: integer
+          example: 5
+        Running:
+          type: integer
+          example: 4
+        Stopped:
+          type: integer
+          example: 1

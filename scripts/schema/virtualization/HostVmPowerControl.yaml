@@ -1,0 +1,7 @@
+      type: string
+      enum:
+      - "on"
+      - "off"
+      - "reboot"
+      - "shutdown"
+      - "recycle"

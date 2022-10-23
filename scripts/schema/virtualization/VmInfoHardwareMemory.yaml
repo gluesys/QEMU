@@ -1,0 +1,8 @@
+      type: object
+      properties:
+        BasicMemG:
+          type: string
+          example: "8"
+        MaxMemG:
+          type: string
+          example: "16"

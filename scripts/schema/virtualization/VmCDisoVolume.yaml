@@ -1,0 +1,12 @@
+      type: object
+      properties:
+        ID:
+          $ref: '#/components/schemas/RuleISOvolID'
+        Name:
+          type: string
+          description: ""
+          example: "Storage"
+        Summary:
+          type: string
+          description: ""
+          example: "Storage (100T,Cluster)"

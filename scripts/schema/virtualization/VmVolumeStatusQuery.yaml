@@ -1,0 +1,6 @@
+      type: string
+      enum:
+      - "all"
+      - "used"
+      - "unused"
+      default: "all"

@@ -1,0 +1,4 @@
+      type: string
+      pattern: '^vmd\d+$'
+      description: ""
+      example: 'vmd1'

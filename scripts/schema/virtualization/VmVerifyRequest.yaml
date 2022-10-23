@@ -1,0 +1,9 @@
+      type: object
+      properties:
+        Value:
+          type: string
+        VerifyType:
+          type: string
+          enum:
+          - "name"
+          default: "name"

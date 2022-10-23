@@ -1,0 +1,15 @@
+      type: object
+      properties:
+        Time:
+          type: number
+          format: int32
+          example: 1647311136
+        DateTime:
+          type: string
+          example: "2022/03/14 22:25:36"
+        Work:
+          type: string
+          example: "VM is starting"
+        Result:
+          type: boolean
+          example: true

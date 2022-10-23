@@ -1,0 +1,18 @@
+      type: object
+      properties:
+        ID:
+          $ref: '#/components/schemas/RuleISOID'
+        Name:
+          type: string
+          description: ""
+          example: "Linux_CentOS7_ISO"
+        VolID:
+          $ref: '#/components/schemas/RuleISOvolID'
+        VolName:
+          type: string
+          description: ""
+          example: "Storage"
+        Summary:
+          type: string
+          description: ""
+          example: "VM-Linux_CentOS7_ISO"

@@ -1,0 +1,17 @@
+      type: object
+      properties:
+        Architecture:
+          type: string
+          example: "x86_64"
+        Model:
+          type: string
+          example: "Intel(R) Xeon(R) Silver 4210 CPU @ 2.20GHz"
+        CPUs:
+          type: integer
+          example: 40
+        MaxCPUs:
+          type: integer
+          example: 240
+        Clocks:
+          type: string
+          example: "999 MHz"

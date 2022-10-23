@@ -1,0 +1,16 @@
+      type: object
+      properties:
+        ID:
+          $ref: '#/components/schemas/RuleVolID'
+        Name:
+          type: string
+          description: ""
+          example: "Storage"
+        SizeG:
+          type: string
+          description: ""
+          example: "200"
+        Summary:
+          type: string
+          description: ""
+          example: "Storage (200 GiB)"

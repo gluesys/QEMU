@@ -1,0 +1,41 @@
+      type: object
+      properties:
+        Name:
+          type: string
+          example: "ISO"
+        Status:
+          type: string
+          example: "running"
+        AutoStart:
+          type: boolean
+          example: true
+        Persistent:
+          type: boolean
+          example: true
+        Capacity:
+          type: object
+          properties:
+            Total:
+              type: string
+              example: "3.12"
+            TotalUnit:
+              allOf:
+                - $ref: '#/components/schemas/DataSizeUnit'
+              example: "TiB"
+            Used:
+              type: string
+              example: "35.91"
+            UsedUnit:
+              allOf:
+                - $ref: '#/components/schemas/DataSizeUnit'
+              example: "GiB"
+            Free:
+              type: string
+              example: "2.96"
+            FreeUnit:
+              allOf:
+                - $ref: '#/components/schemas/DataSizeUnit'
+              example: "TiB"
+            UseRate:
+              type: string
+              example: "2.20"

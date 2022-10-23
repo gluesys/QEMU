@@ -1,0 +1,9 @@
+      type: object
+      properties:
+        token:
+          type: string
+          format: "7afJ3282nFEh"
+        url:
+          type: string
+          example: "http://192.168.61.25/path=?t2F7ewrf7eSHneH"
+          format: url

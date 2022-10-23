@@ -1,0 +1,4 @@
+      type: string
+      pattern: '^iso\d+$'
+      description: ""
+      example: 'iso1'

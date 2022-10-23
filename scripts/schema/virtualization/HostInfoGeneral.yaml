@@ -1,0 +1,14 @@
+      type: object
+      properties:
+        OSversion:
+          type: string
+          description: ""
+          example: "AnyStor-E-3.0.6"
+        EVversion:
+          type: string
+          description: ""
+          example: "1.0"
+        Uptime:
+          type: string
+          description: ""
+          example: "240 day, 22 hour, 23 minute"

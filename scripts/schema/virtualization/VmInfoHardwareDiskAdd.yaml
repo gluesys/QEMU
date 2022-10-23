@@ -1,0 +1,27 @@
+      type: object
+      properties:
+        VolumeName:
+          type: string
+          description: ""
+          example: "Storage"
+        DiskName:
+          type: string
+          description: ""
+          example: "disk-1"
+        NewDisk:
+          type: boolean
+          description: ""
+        NewCapacity:
+          type: number
+          description: ""
+          example: 500
+        NewDiskType:
+          type: string
+          enum:
+          - "qcow2"
+          - "raw"
+        Driver:
+          type: string
+          enum:
+          - "virtio"
+          - "sata"

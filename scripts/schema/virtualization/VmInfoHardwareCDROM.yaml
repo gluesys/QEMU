@@ -1,0 +1,9 @@
+      type: object
+      properties:
+        Volume:
+          type: string
+        ISOname:
+          type: string
+        Mounted:
+          type: boolean
+          example: true

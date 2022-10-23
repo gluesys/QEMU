@@ -1,0 +1,8 @@
+      type: object
+      properties:
+        Return:
+          type: boolean
+        ReturnCode:
+          type: number
+        ReturnMsg:
+          type: string

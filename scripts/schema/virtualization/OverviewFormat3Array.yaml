@@ -1,0 +1,13 @@
+      type: object
+      properties:
+        Category:
+          type: string
+          description: ""
+        Type:
+          type: string
+          description: ""
+        Values:
+          type: array
+          description: ""
+          items:
+            type: string

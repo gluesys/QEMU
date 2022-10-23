@@ -1,0 +1,4 @@
+      type: string
+      pattern: '^net\d+$'
+      description: ""
+      example: 'net1'

@@ -1,0 +1,8 @@
+      type: object
+      properties:
+        Status:
+          $ref: '#/components/schemas/RuleVMStatus'
+        Uptime:
+          type: string
+          description: ""
+          example: "240 day, 22 hour, 23 minute"

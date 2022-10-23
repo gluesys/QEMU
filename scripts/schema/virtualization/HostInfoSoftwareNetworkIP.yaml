@@ -1,0 +1,16 @@
+      type: object
+      properties:
+        Management:
+          type: string
+          example: "192.168.61.25"
+          format: "ipv4"
+        Service:
+          type: array
+          items:
+            type: string
+            example: "20.20.20.25"
+            format: "ipv4"
+        Storage:
+          type: string
+          example: "10.10.10.25"
+          format: "ipv4"

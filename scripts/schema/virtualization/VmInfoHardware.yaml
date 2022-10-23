@@ -1,0 +1,16 @@
+      type: object
+      properties:
+        CPU:
+          $ref: '#/components/schemas/VmInfoHardwareCPU'
+        Memory:
+          $ref: '#/components/schemas/VmInfoHardwareMemory'
+        CDROM:
+          $ref: '#/components/schemas/VmInfoHardwareCDROM'
+        Disks:
+          type: array
+          items:
+            $ref: '#/components/schemas/VmInfoHardwareDisk'
+        Networks:
+          type: array
+          items:
+            $ref: '#/components/schemas/VmInfoHardwareNetwork'

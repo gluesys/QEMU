@@ -1,0 +1,20 @@
+      type: object
+      properties:
+        ID:
+          $ref: '#/components/schemas/RuleDiskID'
+        Volume:
+          type: string
+        DiskName:
+          type: string
+        Capacity:
+          type: string
+        Type:
+          type: string
+          enum:
+          - "qcow2"
+          - "raw"
+        Driver:
+          type: string
+          enum:
+          - "virtio"
+          - "sata"

@@ -1,0 +1,7 @@
+      type: object
+      properties:
+        Driver:
+          type: string
+          enum:
+          - "e1000"
+          - "virtio"

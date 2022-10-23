@@ -1,0 +1,28 @@
+      type: object
+      properties:
+        Name:
+          $ref: '#/components/schemas/RuleVMName'
+        HostID:
+          $ref: '#/components/schemas/RuleHostID'
+        BasicCPU:
+          type: number
+          description: ""
+          example: 2
+        MaxCPU:
+          type: number
+          description: ""
+          example: 4
+        BasicMemG:
+          type: number
+          description: ""
+          example: 4
+        MaxMemG:
+          type: number
+          description: ""
+          example: 8
+        OSdisk:
+          $ref: '#/components/schemas/VmInfoHardwareDiskAdd'
+        Network:
+          $ref: '#/components/schemas/VmInfoHardwareNetworkAdd'
+        CDROM:
+          $ref: '#/components/schemas/VmInfoHardwareCDROM'

@@ -1,0 +1,10 @@
+      type: object
+      properties:
+        vNetwork:
+          type: string
+          example: "virbr0"
+        Driver:
+          type: string
+          enum:
+          - "e1000"
+          - "virtio"

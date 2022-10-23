@@ -1,0 +1,23 @@
+    get:
+      x-mojo-to: 'Virtualization::Inverse::IVM#getIvmHistory'
+      summary: ""
+      description: ""
+      operationId: getIvmInfoHistory
+      parameters:
+      - name: IvmID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleIvmID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IvmInfoHistoryMsg'
+      tags:
+        - IVM_Machine

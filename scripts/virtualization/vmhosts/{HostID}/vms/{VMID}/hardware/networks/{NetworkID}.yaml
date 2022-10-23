@@ -1,0 +1,74 @@
+    get:
+      x-mojo-to: 'Virtualization::VM#getVmHardwareNetworkInfo'
+      summary: ""
+      description: ""
+      operationId: getHostVmInfoHardwareNetworkInfo
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      - name: NetworkID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleNetworkID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ID:
+                    $ref: '#/components/schemas/RuleVMID'
+                  Name:
+                    $ref: '#/components/schemas/RuleVMName'
+                  HostID:
+                    $ref: '#/components/schemas/RuleHostID'
+                  HostName:
+                    $ref: '#/components/schemas/RuleHostName'
+                  Network:
+                    $ref: '#/components/schemas/VmInfoHardwareNetwork'
+      tags:
+        - VM_Machine
+    delete:
+      x-mojo-to: 'Virtualization::VM#removeVmHardwareNetwork'
+      summary: ""
+      description: ""
+      operationId: delHostVmInfoHardwareNetwork
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      - name: NetworkID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleNetworkID'
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - VM_Machine

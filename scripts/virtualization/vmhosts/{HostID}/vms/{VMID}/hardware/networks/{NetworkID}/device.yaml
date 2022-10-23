@@ -1,0 +1,69 @@
+    get:
+      x-mojo-to: 'Virtualization::VM#getVmHardwareNetworkOption'
+      summary: ""
+      description: ""
+      operationId: getHostVmInfoHardwareNetworkInfoDevice
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      - name: NetworkID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleNetworkID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VmInfoHardwareNetworkDevice'
+      tags:
+        - VM_Machine
+    put:
+      x-mojo-to: 'Virtualization::VM#setVmHardwareNetworkOption'
+      summary: ""
+      description: ""
+      operationId: updateHostVmInfoHardwareNetworkDevice
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      - name: NetworkID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleNetworkID'
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VmInfoHardwareNetworkDevice'
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - VM_Machine

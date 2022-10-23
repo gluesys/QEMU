@@ -1,0 +1,58 @@
+    get:
+      x-mojo-to: 'Virtualization::VM#getVmComment'
+      summary: ""
+      description: ""
+      operationId: getHostVmInfoComment
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VmInfoComment'
+      tags:
+        - VM_Machine
+    put:
+      x-mojo-to: 'Virtualization::VM#setVmComment'
+      summary: ""
+      description: ""
+      operationId: updateHostVmInfoComment
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VmInfoComment'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - VM_Machine

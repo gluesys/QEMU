@@ -1,0 +1,49 @@
+    get:
+      x-mojo-to: 'Virtualization::Inverse::IVM#getIvmInfoOverview'
+      description: ''
+      summary: ''
+      operationId: getIvmInfoOverview
+      parameters:
+        - description: ''
+          in: path
+          name: IvmID
+          required: true
+          schema:
+            $ref: '#/components/schemas/RuleIvmID'
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                properties:
+                  ID:
+                    $ref: '#/components/schemas/RuleIvmID'
+                  Name:
+                    $ref: '#/components/schemas/RuleIvmName'
+                  Comment:
+                    description: ''
+                    items:
+                      $ref: '#/components/schemas/IvmInfoComment'
+                    type: array
+                  General:
+                    description: ''
+                    items:
+                      $ref: '#/components/schemas/OverviewFormat1String'
+                    type: array
+                  History:
+                    description: ''
+                    items:
+                      $ref: '#/components/schemas/IvmInfoHistoryMsg'
+                    type: array
+                  Hosts:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/IVHostAbstract'
+                  Resource:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/OverviewFormat3Array'
+                type: object
+      tags:
+        - IVM_Machine

@@ -1,0 +1,58 @@
+    get:
+      x-mojo-to: 'Virtualization::VM#getVmBootOption'
+      summary: ""
+      description: ""
+      operationId: getHostVmInfoBoot
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VmInfoBoot'
+      tags:
+        - VM_Machine
+    put:
+      x-mojo-to: 'Virtualization::VM#setVmBootOption'
+      summary: ""
+      description: ""
+      operationId: updateHostVmInfoBoot
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VmInfoBoot'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - VM_Machine

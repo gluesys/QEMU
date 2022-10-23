@@ -1,0 +1,26 @@
+    get:
+      x-mojo-to: 'Virtualization::Inverse::IVM#getIvmsTree'
+      summary: ""
+      description: ""
+      operationId: getIvmTree
+      parameters:
+      - in: query
+        name: status
+        description: ""
+        required: false
+        schema:
+          $ref: '#/components/schemas/TreeStatusQuery'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  entity:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TreeIvmList'
+      tags:
+        - IVM_Topology

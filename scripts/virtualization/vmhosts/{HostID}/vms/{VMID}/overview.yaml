@@ -1,0 +1,56 @@
+    get:
+      x-mojo-to: 'Virtualization::VM#getVmOverview'
+      summary: ""
+      description: ""
+      operationId: getHostVmInfoOverview
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ID:
+                    $ref: '#/components/schemas/RuleVMID'
+                  Name:
+                    $ref: '#/components/schemas/RuleVMName'
+                  HostID:
+                    $ref: '#/components/schemas/RuleHostID'
+                  HostName:
+                    $ref: '#/components/schemas/RuleHostName'
+                  General:
+                    type: array
+                    description: ""
+                    items:
+                      $ref: '#/components/schemas/OverviewFormat1String'
+                  Resource:
+                    type: array
+                    description: ""
+                    items:
+                      $ref: '#/components/schemas/OverviewFormat3Array'
+                  History:
+                    type: array
+                    description: ""
+                    items:
+                      $ref: '#/components/schemas/VmInfoHistoryMsg'
+                  Comment:
+                    type: array
+                    description: ""
+                    items:
+                      $ref: '#/components/schemas/VmInfoComment'
+      tags:
+        - VM_Machine

@@ -1,0 +1,23 @@
+    get:
+      x-mojo-to: 'Virtualization::VMiso#getHostISOlistForVM'
+      summary: ""
+      description: ""
+      operationId: getVmCDisoList
+      parameters:
+      - name: ISOvolID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleISOvolID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/VmCDisoInfo'
+      tags:
+        - VM_ISO

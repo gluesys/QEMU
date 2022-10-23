@@ -1,0 +1,29 @@
+    get:
+      x-mojo-to: 'Virtualization::VM#getVmHistory'
+      summary: ""
+      description: ""
+      operationId: getHostVmInfoHistory
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/VmInfoHistoryMsg'
+      tags:
+        - VM_Machine

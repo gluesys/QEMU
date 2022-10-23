@@ -1,0 +1,23 @@
+    get:
+      x-mojo-to: 'Virtualization::Inverse::IVM#getIvmHardwareClusterVolumes'
+      description: ''
+      operationId: getIvmInfoHardwareClusterVolume
+      parameters:
+      - name: IvmID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleIvmID'
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IvmInfoHardwareClusterVolume'
+          description: ''
+      summary: ''
+      tags:
+        - IVM_Machine

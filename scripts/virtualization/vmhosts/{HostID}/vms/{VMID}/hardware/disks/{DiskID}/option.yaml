@@ -1,0 +1,70 @@
+    get:
+      x-mojo-to: 'Virtualization::VM#getVmHardwareDiskOption'
+      summary: ""
+      description: ""
+      operationId: getHostVmInfoHardwareDiskInfoOption
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      - name: DiskID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleDiskID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VmInfoHardwareDiskOption'
+      tags:
+        - VM_Machine
+    put:
+      x-mojo-to: 'Virtualization::VM#setVmHardwareDiskOption'
+      summary: ""
+      description: ""
+      operationId: updateHostVmInfoHardwareDiskInfoOption
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      - name: DiskID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleDiskID'
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VmInfoHardwareDiskOption'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - VM_Machine

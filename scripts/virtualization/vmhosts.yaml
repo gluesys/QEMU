@@ -1,0 +1,16 @@
+    get:
+      x-mojo-to: 'Virtualization::Host#getHostList'
+      summary: ""
+      description: ""
+      operationId: getHostList
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/HostInfo'
+      tags:
+        - VM_Host

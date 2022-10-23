@@ -1,0 +1,26 @@
+    get:
+      x-mojo-to: 'Virtualization::Host#getVmsTree'
+      summary: ""
+      description: ""
+      operationId: getVmTree
+      parameters:
+      - in: query
+        name: status
+        description: ""
+        required: false
+        schema:
+          $ref: '#/components/schemas/TreeStatusQuery'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  entity:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/TreeHostList'
+      tags:
+        - VM_Topology

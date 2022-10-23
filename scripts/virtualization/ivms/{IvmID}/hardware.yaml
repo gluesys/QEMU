@@ -1,0 +1,28 @@
+    get:
+      x-mojo-to: 'Virtualization::Inverse::IVM#getIvmHardware'
+      description: ''
+      operationId: getIvmInfoHardware
+      parameters:
+      - name: IvmID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleIvmID'
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ID:
+                    $ref: '#/components/schemas/RuleIvmID'
+                  Name:
+                    $ref: '#/components/schemas/RuleIvmName'
+                  Hardware:
+                    $ref: '#/components/schemas/IvmInfoHardware'
+          description: ''
+      summary: ''
+      tags:
+        - IVM_Machine

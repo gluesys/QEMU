@@ -1,0 +1,45 @@
+    get:
+      x-mojo-to: 'Virtualization::Inverse::IVHost#getIVHostInfoOverview'
+      summary: ""
+      description: ""
+      operationId: getIVHostOverview
+      parameters:
+      - name: IvmID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleIvmID'
+      - name: IVHostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleIVHostID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ID:
+                    $ref: '#/components/schemas/RuleIVHostID'
+                  HostName:
+                    $ref: '#/components/schemas/RuleIVHostName'
+                  IvmID:
+                    $ref: '#/components/schemas/RuleIvmID'
+                  IvmName:
+                    $ref: '#/components/schemas/RuleIvmName'
+                  General:
+                    description: ''
+                    items:
+                      $ref: '#/components/schemas/OverviewFormat1String'
+                    type: array
+                  Resource:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/OverviewFormat3Array'
+      tags:
+        - IVM_Host

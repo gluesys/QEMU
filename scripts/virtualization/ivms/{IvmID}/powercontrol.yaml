@@ -1,0 +1,28 @@
+    post:
+      x-mojo-to: 'Virtualization::Inverse::IVM#controlIvmPower'
+      summary: ""
+      description: ""
+      operationId: ctlIvmPower
+      parameters:
+      - name: IvmID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleIvmID'
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Power:
+                  $ref: '#/components/schemas/IvmPowerControl'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - IVM_Machine

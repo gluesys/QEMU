@@ -1,0 +1,46 @@
+    get:
+      x-mojo-to: 'Virtualization::Inverse::IVM#getIvmComment'
+      summary: ""
+      description: ""
+      operationId: getIvmInfoComment
+      parameters:
+      - name: IvmID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleIvmID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IvmInfoComment'
+      tags:
+        - IVM_Machine
+    put:
+      x-mojo-to: 'Virtualization::Inverse::IVM#setIvmComment'
+      summary: ""
+      description: ""
+      operationId: updateIvmInfoComment
+      parameters:
+      - name: IvmID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleIvmID'
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IvmInfoComment'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - IVM_Machine

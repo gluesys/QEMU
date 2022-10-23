@@ -1,0 +1,28 @@
+    get:
+      x-mojo-to: 'Virtualization::Host#getHostVirtualNetwork'
+      summary: ""
+      description: ""
+      operationId: getHostInfoVirtualNetwork
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ID:
+                    $ref: '#/components/schemas/RuleHostID'
+                  HostName:
+                    $ref: '#/components/schemas/RuleHostName'
+                  VitrualNetworks:
+                    $ref: '#/components/schemas/HostInfoVirtualNetwork'
+      tags:
+        - VM_Host

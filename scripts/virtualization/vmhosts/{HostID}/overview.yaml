@@ -1,0 +1,50 @@
+    get:
+      x-mojo-to: 'Virtualization::Host#getHostOverview'
+      summary: ""
+      description: ""
+      operationId: getHostInfoOverview
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ID:
+                    $ref: '#/components/schemas/RuleHostID'
+                  HostName:
+                    $ref: '#/components/schemas/RuleHostName'
+                  ManagementIp:
+                    type: string
+                    example: "192.168.61.25"
+                    format: "ipv4"
+                  General:
+                    type: array
+                    description: ""
+                    items:
+                      $ref: '#/components/schemas/OverviewFormat1String'
+                  VMStatus:
+                    $ref: '#/components/schemas/HostInfoVmStatus'
+                  Resource:
+                    type: array
+                    description: ""
+                    items:
+                      allOf:
+                      - $ref: '#/components/schemas/OverviewFormat3Array'
+                      - type: object
+                        properties:
+                          Category:
+                            type: string
+                            enum:
+                            - "Hardware"
+                            - "Software"
+      tags:
+        - VM_Host

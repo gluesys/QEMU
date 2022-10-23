@@ -1,0 +1,35 @@
+    post:
+      x-mojo-to: 'Virtualization::VM#checkVmDiskNameVerify'
+      summary: ""
+      description: ""
+      operationId: getVerifyVmDiskName
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              type: object
+              allOf:
+              - $ref: '#/components/schemas/VmVerifyRequest'
+              properties:
+                Value:
+                  example: "VM-100_OS_Disk"
+        required: true
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                - $ref: '#/components/schemas/VmVerifyResponse'
+                properties:
+                  Return:
+                    example: false
+                  ReturnCode:
+                    example: 100
+                  ReturnMsg:
+                    example: "The same name exists."
+      tags:
+        - VM_Machine

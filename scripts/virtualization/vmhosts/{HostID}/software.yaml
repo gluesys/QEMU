@@ -1,0 +1,28 @@
+    get:
+      x-mojo-to: 'Virtualization::Host#getHostSoftware'
+      summary: ""
+      description: ""
+      operationId: getHostInfoSoftware
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ID:
+                    $ref: '#/components/schemas/RuleHostID'
+                  HostName:
+                    $ref: '#/components/schemas/RuleHostName'
+                  Software:
+                    $ref: '#/components/schemas/HostInfoSoftware'
+      tags:
+        - VM_Host

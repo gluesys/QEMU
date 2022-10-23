@@ -1,0 +1,71 @@
+    get:
+      x-mojo-to: 'Virtualization::VM#getVmHardwareNetworks'
+      summary: ""
+      description: ""
+      operationId: getHostVmInfoHardwareNetworkList
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ID:
+                    $ref: '#/components/schemas/RuleVMID'
+                  Name:
+                    $ref: '#/components/schemas/RuleVMName'
+                  HostID:
+                    $ref: '#/components/schemas/RuleHostID'
+                  HostName:
+                    $ref: '#/components/schemas/RuleHostName'
+                  Networks:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/VmInfoHardwareNetwork'
+      tags:
+        - VM_Machine
+    post:
+      x-mojo-to: 'Virtualization::VM#createVmHardwareNetwork'
+      summary: ""
+      description: ""
+      operationId: addHostVmNetwork
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VmInfoHardwareNetworkAdd'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - VM_Machine

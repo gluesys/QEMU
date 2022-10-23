@@ -1,0 +1,39 @@
+    get:
+      summary: ""
+      description: ""
+      operationId: getIvmInfo
+      x-mojo-to: 'Virtualization::Inverse::IVM#getIvmInfo'
+      parameters:
+      - name: IvmID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleIvmID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IvmInfo'
+      tags:
+        - IVM_Machine
+    delete:
+      summary: ''
+      description: ''
+      operationId: delIvm
+      x-mojo-to: Virtualization::Inverse::IVM#removeIvm
+      parameters:
+        - description: ''
+          in: path
+          name: VMID
+          required: true
+          schema:
+            $ref: '#/components/schemas/RuleIvmID'
+      responses:
+        200:
+          description: ''
+          content: {}
+      tags:
+        - IVM_Machine

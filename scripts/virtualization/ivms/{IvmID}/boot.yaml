@@ -1,0 +1,21 @@
+    get:
+      x-mojo-to: 'Virtualization::Inverse::IVM#getIvmBootOption'
+      summary: ""
+      description: ""
+      operationId: getIvmInfoBoot
+      parameters:
+      - name: IvmID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleIvmID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IvmInfoBoot'
+      tags:
+        - IVM_Machine

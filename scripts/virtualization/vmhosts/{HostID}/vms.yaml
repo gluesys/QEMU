@@ -1,0 +1,60 @@
+    get:
+      x-mojo-to: 'Virtualization::VM#getVmBriefList'
+      summary: ""
+      description: ""
+      operationId: getHostInfoVms
+      parameters:
+      - in: query
+        name: name
+        description: ""
+        required: false
+        schema:
+          $ref: '#/components/schemas/VmSearchNameQuery'
+      - in: query
+        name: status
+        description: ""
+        required: false
+        schema:
+          $ref: '#/components/schemas/VmSearchStatusQuery'
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/VmInfoSummary'
+      tags:
+        - VM_Host
+    post:
+      x-mojo-to: 'Virtualization::VM#createVm'
+      summary: ""
+      description: ""
+      operationId: addHostVm
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VmInfoAdd'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - VM_Host

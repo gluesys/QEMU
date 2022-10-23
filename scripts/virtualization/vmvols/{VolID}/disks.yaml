@@ -1,0 +1,29 @@
+    get:
+      x-mojo-to: 'Virtualization::VMdisk#getHostVolumeDiskListForVM'
+      summary: ""
+      description: ""
+      operationId: getVmVolumeInfoDiskList
+      parameters:
+      - name: VolID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVolID'
+      - in: query
+        name: status
+        description: ""
+        required: false
+        schema:
+          $ref: '#/components/schemas/VmVolumeStatusQuery'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/VmVolumeInfoDisk'
+      tags:
+        - VM_Disk

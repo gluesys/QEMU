@@ -1,0 +1,33 @@
+    post:
+      x-mojo-to: 'Virtualization::Inverse::IVM#checkIvmDiskNameVerify'
+      summary: ""
+      description: ""
+      operationId: getVerifyIvmDiskName
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              type: object
+              allOf:
+              - $ref: '#/components/schemas/VmVerifyRequest'
+              properties:
+                Value:
+                  example: "IVM-100_OS_Disk"
+        required: true
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                type: object
+                allOf:
+                - $ref: '#/components/schemas/VmVerifyResponse'
+                properties:
+                  Return:
+                    example: false
+                  ReturnMsg:
+                    example: "The same name exists."
+      tags:
+        - IVM_Machine

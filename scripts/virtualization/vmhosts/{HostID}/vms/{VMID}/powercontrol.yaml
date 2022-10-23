@@ -1,0 +1,34 @@
+    post:
+      x-mojo-to: 'Virtualization::VM#controlVmPower'
+      summary: ""
+      description: ""
+      operationId: ctlHostVmPower
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Power:
+                  $ref: '#/components/schemas/HostVmPowerControl'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - VM_Machine

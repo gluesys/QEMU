@@ -1,0 +1,16 @@
+    get:
+      x-mojo-to: 'Virtualization::Inverse::IVM#getIvmClusterNetwork'
+      description: ''
+      operationId: getIvmClusterNetwork
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IvmClusterNetworks'
+          description: ''
+      summary: ''
+      tags:
+        - IVM_Machine

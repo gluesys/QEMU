@@ -1,0 +1,51 @@
+    get:
+      x-mojo-to: 'Virtualization::VM#getVmConsole'
+      summary: ""
+      description: ""
+      operationId: getHostVmInfoConsole
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VmInfoConsole'
+      tags:
+        - VM_Machine
+    delete:
+      x-mojo-to: 'Virtualization::VM#delVmConsole'
+      summary: ""
+      description: ""
+      operationId: delHostVmInfoConsole
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - VM_Machine

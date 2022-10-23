@@ -1,0 +1,58 @@
+    get:
+      x-mojo-to: 'Virtualization::VM#getVmHardwareMemory'
+      summary: ""
+      description: ""
+      operationId: getHostVmInfoHardwareMemory
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VmInfoHardwareMemory'
+      tags:
+        - VM_Machine
+    put:
+      x-mojo-to: 'Virtualization::VM#setVmHardwareMemory'
+      summary: ""
+      description: ""
+      operationId: updateHostVmInfoHardwareMemory
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VmInfoHardwareMemory'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - VM_Machine

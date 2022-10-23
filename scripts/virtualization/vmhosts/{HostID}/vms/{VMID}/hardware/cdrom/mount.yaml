@@ -1,0 +1,55 @@
+    post:
+      x-mojo-to: 'Virtualization::VM#mountVmHardwareCDROM'
+      summary: ""
+      description: ""
+      operationId: mountHostVmInfoHardwareISOimage
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VmInfoHardwareISOimageMount'
+        required: true
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - VM_Machine
+    delete:
+      x-mojo-to: 'Virtualization::VM#unmountVmHardwareCDROM'
+      summary: ""
+      description: ""
+      operationId: unmountHostVmInfoHardwareISOimage
+      parameters:
+      - name: HostID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleHostID'
+      - name: VMID
+        in: path
+        description: ""
+        required: true
+        schema:
+          $ref: '#/components/schemas/RuleVMID'
+      responses:
+        200:
+          description: ""
+          content: {}
+      tags:
+        - VM_Machine
